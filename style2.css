@@ -1,0 +1,127 @@
+body{
+    font-family: "beautiful";
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+    background-color: rgba(190, 190, 190, 0.658);
+}
+
+#nom-prenom{
+    text-align: center;
+    margin: 75px;
+    
+}
+.photo-nom{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-nom img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.photo-nom_main img{
+    width: 400px;
+    height: 300px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+header{
+    background-color: rgba(155, 58, 58, 0.836);
+}
+
+#info-perso{
+    background-color: rgb(219, 76, 76);
+    width: 500px;
+    margin: 50px;
+    border-radius: 15%;
+    text-align: center;
+    font-size: larger;
+}
+
+#header div{
+    display: flex;
+    justify-content: center;
+}
+
+.lien {
+    background-color: rgb(255, 27, 15);
+    text-decoration: none;
+    color: #770000;
+    width: 35%;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrapper figure img{
+    margin-top: 5%;
+    width: 100%;
+}
+
+.un{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.deux{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    text-align: center;
+}
+
+.wrapper div {
+    background-image: url("images/bae.jpg");
+    width: 200px;
+    height: 200px;
+}
+
+@font-face {
+    font-family: "beautiful";
+    src:url("Police/beautifulpolice.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*------------REGLAGE RESPONSIVE------------*/
+
+@media screen and (min-width: 681px) and (max-width: 1024px) {
+    .container{
+        width: 100%;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .container{
+        width: 100%;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        text-align: center;
+    }
+    .wrapper figure {
+        grid-row: auto;
+        grid-column: auto;
+    }
+}
